@@ -9,12 +9,16 @@ public class Main {
         CalcularFreteMinasGeraisVisitor visitorMg = new CalcularFreteMinasGeraisVisitor();
         CalcularFreteSaoPauloVisitor visitorSp = new CalcularFreteSaoPauloVisitor();
 
-        System.out.println("- Minas Gerais -");
-        System.out.println("Movel: " + movel.calcularFrete(visitorMg));
-        System.out.println("Eletronico: " + eletronico.calcularFrete(visitorMg));
+        System.out.println("- Frete sem Taxa -");
+        System.out.println("Movel: R$" + movel.getValorFrete());
+        System.out.println("Eletronico: R$" + eletronico.getValorFrete());
+
+        System.out.println("\n- Minas Gerais -");
+        System.out.println("Movel: R$" + movel.calcularFrete(visitorMg));
+        System.out.println("Eletronico: R$" + eletronico.calcularFrete(visitorMg));
 
         System.out.println("\n- São Paulo -");
-        System.out.println("Movel: " + movel.calcularFrete(visitorSp));
-        System.out.println("Eletronico: " + eletronico.calcularFrete(visitorSp));
+        System.out.println("Movel: R$" + movel.calcularFrete(visitorSp));
+        System.out.println("Eletronico: R$" + eletronico.calcularFrete(visitorSp));
     }
 }
